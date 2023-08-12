@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "0facc4de-7c31-4a8e-8783-a92b13760fa5",
+		"name": "JavaProduct",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14656422"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SIngle not found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/8b7d3e91-f031-4e18-8f44-edd99578888",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"8b7d3e91-f031-4e18-8f44-edd99578888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SIngle Existing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/f29bc269-ddfa-4429-87b6-86b8e2e13e2b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"f29bc269-ddfa-4429-87b6-86b8e2e13e2b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"bcc50561-e6d8-4db9-87aa-b072d5bff234\",\r\n        \"name\": \"WD 2TB Elements Portable External Hard Drive - USB 3.0\",\r\n        \"description\": \"USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7\",\r\n        \"price\": 500.0,\r\n        \"stockLevel\": 0,\r\n        \"created\": \"2023-01-01T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/bcc50561-e6d8-4db9-87aa-b072d5bff234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"bcc50561-e6d8-4db9-87aa-b072d5bff234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"bcc50561-e6d8-4db9-87aa-b072d5bff234\",\r\n        \"name\": \"Stefans Penna blå\",\r\n        \"description\": \"Funkar inte med köp ändå!!!\",\r\n        \"price\": 450.0,\r\n        \"stockLevel\": 3,\r\n        \"created\": \"2023-01-01T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
